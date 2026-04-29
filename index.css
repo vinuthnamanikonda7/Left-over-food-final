@@ -1,0 +1,31 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --color-brand: #FC8019;
+  --color-brand-dark: #e67300;
+  --radius-xl: 2rem;
+}
+
+@layer base {
+  body {
+    @apply font-sans bg-slate-50 text-slate-900;
+  }
+}
+
+.food-tech-card {
+  @apply bg-white rounded-xl shadow-sm border border-slate-100 transition-all duration-300 hover:shadow-md;
+}
+
+.status-pulse {
+  @apply relative flex h-3 w-3;
+}
+
+.status-pulse span:first-child {
+  @apply animate-ping absolute inline-flex h-full w-full rounded-full opacity-75;
+}
+
+.status-pulse span:last-child {
+  @apply relative inline-flex rounded-full h-3 w-3;
+}
